@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    transition: height 1s ease;
+}
+
+.container-dark{
+    background-color: #141c24;
+}
+
+.container-light{
+    background-color: #e2e4e6;
+}
+
+.content{
+    overflow: hidden;
+}
+
+
+.SC-enter{
+
+    transform: translateX(-110%);
+}
+
+.SC-enter-active{
+    transform: translateX(0%);
+    transition: all 0.5s ease;
+}
+
+.SC-exit{
+}
+
+.SC-exit-active{
+    transform: translateX(-110%);
+    transition: all 0.5s ease;
+}
+
+.DT-enter{
+
+    transform: translateX(110%);
+}
+
+.DT-enter-active{
+    transform: translateX(0%);
+    transition: all 0.5s ease;
+}
+
+.DT-exit{
+}
+
+.DT-exit-active{
+    transform: translateX(110%);
+    transition: all 0.5s ease;
+}
+

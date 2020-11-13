@@ -1,0 +1,220 @@
+/****************** HEADER GENERALE ******************/
+.header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    transition: .5s ease;
+    overflow: hidden;    
+}
+
+/****************** HEADER DARK ******************/
+.edge-dark{
+    
+    background-image: linear-gradient(10deg,#1a252fd8 49%,#141c24d8 50%);
+    box-shadow: 0px 0px 5px #e2e4e6;
+    color: #f4f5f6;
+}
+
+/******* icons dark *******/
+.edge-dark svg.MuiSvgIcon-root{
+    color: #f4f5f6;
+}
+
+/****************** HEADER LIGHT ******************/
+.edge-light{
+    background-image: linear-gradient(-10deg,#bdc3c7d8 49%,#b4bbbfd8 50%);
+    box-shadow: 0px 0px 5px #141c24;
+    color: #141c24;
+}
+
+/******* icons light *******/
+.edge-light svg.MuiSvgIcon-root{
+    color: #141c24;
+}
+
+svg.MuiSvgIcon-root >*{
+    pointer-events: none;
+}
+
+.header-container>div{
+    margin-bottom: 20px;
+}
+
+svg.MuiSvgIcon-root.active{
+    color: #c0392b;
+}
+
+/****************** LOGO ******************/
+.header-logo{
+    font-size: 200%;
+    text-transform: capitalize;
+    font-family: 'PT Serif Caption', serif;
+    word-spacing: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/****************** PHONE MENU ******************/
+svg.phoneMenu{
+    display: none;
+    cursor: pointer;
+}
+
+/****************** SEARCHBOX GENERALE ******************/
+.search-box{
+    width: 100%;
+    outline:none;
+    font-size: 90%;
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    
+}
+/****************** SEARCHBOX DARK ******************/
+.dark{
+    background-color: #f4f5f675;
+    border: 3px solid #f4f5f6b2;
+    color: #141c24;
+    box-shadow: 0px 0px 1px  #fff ,0px 0px 2px #f4f5f6 , 
+                inset 0px 0px 1px #141c24;
+
+    transition: .5s ease;
+}
+
+.dark:focus{
+    box-shadow: 0px 0px 10px #fff ,0px 0px 15px #f4f5f6 ,
+                 inset 0px 0px 10px #141c24;
+}
+
+/****************** SEARCHBOX LIGHT ******************/
+.light{
+    background-color: #141c243d;
+    color: #141c24;
+    border: 3px solid #141c24b2;
+
+    box-shadow: 0px 0px 1px  #141c24 ,0px 0px 2px #141c24 , 
+                inset 0px 0px 1px #fff;
+
+    transition: .5s ease;
+}
+
+.light:focus{
+    box-shadow: 0px 0px 10px  #141c24 ,0px 0px 15px #141c24 , 
+                inset 0px 0px 10px #fff;
+}
+
+
+.header-actions{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    
+}
+
+.header-actions button{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.header-actions button:hover svg{
+    color: #2980b9;
+}
+
+.header-actions button svg{
+    color: var(--lightText);
+    font-size: 35px;
+}
+
+
+@media only screen and (max-width :900px){
+    .header-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+    .header-logo{
+        font-size: 50%;
+    }
+
+    .header-actions button svg{
+        font-size: 25px;
+    }
+
+    .search-box{
+        font-size: 70%;
+    }
+    
+    .dark:focus{
+        box-shadow: 0px 0px 10px #fff ,0px 0px 15px #f4f5f6 ,
+        inset 0px 0px 5px #141c24;
+    }
+
+    .light:focus{
+        box-shadow: 0px 0px 10px  #141c24 ,0px 0px 15px #141c24 , 
+        inset 0px 0px 10px #fff;
+    }
+    
+}
+
+
+
+/**********************************************************************************************/
+.sticky{
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 5;
+}
+
+
+.sticky .header-logo{
+    font-size: 50%;
+}
+
+.sticky .header-actions button svg{
+    font-size: 25px;
+}
+
+.sticky .search-box{
+    font-size: 70%;
+}
+
+.sticky .dark:focus{
+    box-shadow: 0px 0px 10px #fff ,0px 0px 15px #f4f5f6 ,
+        inset 0px 0px 5px #141c24;
+}
+
+.sticky .light:focus{
+    box-shadow: 0px 0px 10px  #141c24 ,0px 0px 15px #141c24 , 
+        inset 0px 0px 10px #fff;
+}
+/**********************************************************************************************/
+
+@media only screen and (max-width :600px){
+    .header-container , .sticky{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .header-logo,.header-actions{
+        width: 100%;
+    }
+
+    svg.phoneMenu{
+        display: inline;
+    }
+
+}
+
+
+

@@ -1,0 +1,322 @@
+/****************** GENERALE POSTER ******************/
+.poster{
+    cursor: pointer;
+    pointer-events: auto;
+    transition: .7s ease;
+}
+
+.poster-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    justify-self: center;
+    border-radius: 10px;
+    transition: .7s ease;
+    text-align: center;
+}
+
+.poster:hover .poster-container{
+    transform: rotateX(180deg);
+    border-radius: 0;
+    
+}
+
+.poster-container > *{
+    pointer-events: none;
+}
+
+/****************** DARK POSTER ******************/
+.poster-dark{
+    background-image: linear-gradient(90deg,#bdc3c7 48%,#b4bbbf 50%);
+}
+
+/****************** LIGHT POSTER ******************/
+.poster-light{
+    background-image: linear-gradient(90deg,#1a252f 48%,#141c24 50%);
+}
+
+
+/****************** POSTER BORDER ******************/
+.poster span{
+    position: absolute;
+    display: block;
+}
+
+
+/****************** POSTER IMG ******************/
+.poster-container img{
+    width: 101%;
+    height: 100%;
+    grid-column: 1/4;
+    grid-row: 1/4;
+    border-radius: 10px;
+    transition: 0.3s linear;
+}
+
+.poster:hover .poster-container img{
+    border-radius: 0;
+    opacity: 0;
+}
+
+/****************** POSTER INFOS ******************/
+.poster-container h3{
+    opacity: 0;
+    justify-self: center;
+    align-self: flex-start;
+    transform: rotateX(180deg);
+    grid-row: 3/4;
+    grid-column: 1/4;
+    text-transform: capitalize;
+    transition: 0.7s ease-in;
+
+}
+
+.poster:hover .poster-dark h3{
+    color: #1a252f;
+    opacity: 1;
+}
+
+.poster:hover .poster-light h3{
+    color: #bdc3c7;
+    opacity: 1;
+}
+
+.poster-container p{
+    opacity: 0;
+    justify-self: center;
+    align-self: center;
+    transform: rotateX(180deg);
+    grid-row: 1/2;
+    grid-column: 1/4;
+    font-weight: bolder;
+    transition: 0.7s ease-in;
+    padding: 0 7px;
+}
+
+p.poster-overview{
+    font-size: 60%;
+    grid-row: 2/3;
+}
+
+.poster:hover .poster-dark p{
+    color: #1a252f;
+    opacity: 1;
+}
+
+.poster:hover .poster-light p{
+    color: #bdc3c7;
+    opacity: 1;
+}
+
+/****************** DARK POSTER BORDER ANIMATION ******************/
+/******** HORIZONTALE ********/
+.poster-dark span:nth-child(1){
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg , transparent , #34495e);
+    box-shadow: 0px 0px 5px #34495e , 0px 0px 10px #34495e , 0px 0px 15px #34495e;
+    border-radius: 0 10px 10px 0;
+}
+
+.poster:hover span:nth-child(1){
+    animation: animate1 1s linear infinite;
+    animation-delay: 0s;
+}
+
+@keyframes animate1 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.poster-dark span:nth-child(3){
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg , transparent , #34495e);
+    box-shadow: 0px 0px 5px #34495e , 0px 0px 10px #34495e , 0px 0px 15px #34495e;
+    border-radius: 0 10px 10px 0;
+    
+}
+
+.poster:hover span:nth-child(3){
+    animation: animate3 1s linear infinite ;
+    animation-delay: 0s;
+}
+
+@keyframes animate3 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+/******** VERTICAL ********/
+.poster-dark span:nth-child(2){
+    bottom: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg , transparent , #34495e);
+    box-shadow: 0px 0px 5px #34495e , 0px 0px 10px #34495e , 0px 0px 15px #34495e;
+    border-radius: 0 10px 10px 0;
+}
+
+.poster:hover span:nth-child(2){
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.5s;
+
+}
+
+@keyframes animate2 {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+.poster-dark span:nth-child(4){
+    top: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg , transparent , #34495e);
+    box-shadow: 0px 0px 5px #34495e , 0px 0px 10px #34495e , 0px 0px 15px #34495e ;
+    border-radius: 0 10px 10px 0;
+}
+
+.poster:hover span:nth-child(4){
+    animation: animate4 1s linear infinite ;
+    animation-delay: 0.5s;
+
+}
+
+@keyframes animate4 {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+
+
+/****************** DARK POSTER BORDER ANIMATION ******************/
+/******** HORIZONTALE ********/
+.poster-light span:nth-child(1){
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg , transparent , #2980b9);
+    box-shadow: 0px 0px 5px #2c8ac7 , 0px 0px 10px #2c8ac7 , 0px 0px 15px #2c8ac7 ;
+    border-radius: 0 10px 10px 0;
+}
+
+.poster:hover span:nth-child(1){
+    animation: animate1 1s linear infinite;
+    animation-delay: 0s;
+}
+
+@keyframes animate1 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.poster-light span:nth-child(3){
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg , transparent , #2980b9);
+    box-shadow: 0px 0px 5px #2c8ac7 , 0px 0px 10px #2c8ac7 , 0px 0px 15px #2c8ac7 ;
+    border-radius: 0 10px 10px 0;
+    
+}
+
+.poster:hover span:nth-child(3){
+    animation: animate3 1s linear infinite ;
+    animation-delay: 0s;
+}
+
+@keyframes animate3 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+/******** VERTICAL ********/
+.poster-light span:nth-child(2){
+    bottom: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg , transparent , #2980b9);
+    box-shadow: 0px 0px 5px #2c8ac7 , 0px 0px 10px #2c8ac7 , 0px 0px 15px #2c8ac7 ;
+    border-radius: 0 10px 10px 0;
+}
+
+.poster:hover span:nth-child(2){
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.5s;
+
+}
+
+@keyframes animate2 {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+.poster-light span:nth-child(4){
+    top: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg , transparent , #2980b9);
+    box-shadow: 0px 0px 5px #2c8ac7 , 0px 0px 10px #2c8ac7 , 0px 0px 15px #2c8ac7 ;
+    border-radius: 0 10px 10px 0;
+}
+
+.poster:hover span:nth-child(4){
+    animation: animate4 1s linear infinite ;
+    animation-delay: 0.5s;
+
+}
+
+@keyframes animate4 {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+

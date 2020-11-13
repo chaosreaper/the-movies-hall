@@ -1,0 +1,16 @@
+.showcase{
+    margin-top:20px;
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,250px));
+    grid-gap: 30px;
+    justify-content: center;
+    pointer-events: none;
+    margin-bottom: 50px;
+}
+
+.showcase:hover .poster:not(:hover){
+    opacity: .2;
+}
+
+
