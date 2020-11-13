@@ -93,6 +93,14 @@ export default function App() {
         }
     })
 
+    const home = ()=>{
+        setType("movie")
+        setPage(1)
+        setSearch("")
+        setDetails(false)
+        window.scrollTo(0,0)
+    }
+
     return (
         <themeContext.Provider value={{theme,changeTheme}} >
             <div className="App">
@@ -102,6 +110,7 @@ export default function App() {
                         onChange={changeHandle} search={search} 
                         type={type}
                         onClick={changeType}
+                        home={home}
                         />
                     </div>
                     <div className="content">

@@ -45,7 +45,7 @@ export default function HeaderSection(props) {
         style={{height:windowSize? (menu? "150px":"40px"):"auto" }} 
         >
             <div className="header-logo" >
-                <h1 >the movie hall</h1>
+                <h1 onClick={props.home} >the movie hall</h1>
                 <MenuIcon className="phoneMenu" onClick={dropMenu} />
             </div>
             <div className="header-search-box" >
