@@ -9,7 +9,9 @@
     transition: .5s ease;
     overflow: hidden;    
 }
-
+h1{
+    cursor: pointer;
+}
 /****************** HEADER DARK ******************/
 .edge-dark{
     
