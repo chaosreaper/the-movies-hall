@@ -75,6 +75,7 @@ export default function App() {
     const changeType = (e)=>{
         setPage(1)
         setDetails(false)
+        window.scrollTo(0,0)
         if(e.target.dataset.type == "movie")
             setType("movie")
         else{

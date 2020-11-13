@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable eqeqeq */
 import React, { useEffect, useState } from 'react'
 import "./movieInfoCard.css"
@@ -31,7 +32,7 @@ export default function MovieInfoCard(props) {
                     <img src={`http://image.tmdb.org/t/p/w185/${rst.poster_path}`} alt="poster" ></img>
                 </div>
                 <div className="infoDetails">
-                    <h3> {rst.title} </h3>
+                    <h3> {rst.title || rst.name} </h3>
                     <span><QueryBuilderIcon/> 
                     {props.chosen.type=="movie"? `${Math.floor(rst.runtime/60)}h ${rst.runtime%60}min` : "N/A"} 
                     </span>
